@@ -62,11 +62,11 @@ function transform() {
 function onShowHowToUse() {
   const howToUseSectionEle = document.querySelector("#how-to-use");
 
-  if (howToUseSectionEle.classList.contains("hide")) {
-    howToUseSectionEle.classList.remove("hide");
-    howToUseSectionEle.classList.add("show");
-  } else {
+  if (howToUseSectionEle.classList.contains("show")) {
     howToUseSectionEle.classList.remove("show");
     howToUseSectionEle.classList.add("hide");
+  } else {
+    howToUseSectionEle.classList.remove("hide");
+    howToUseSectionEle.classList.add("show");
   }
 }
