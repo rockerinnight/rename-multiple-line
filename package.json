@@ -1,0 +1,27 @@
+{
+  "name": "tc-rename-tool-app",
+  "version": "1.0.0",
+  "description": "A tool to rename multiple line test-cases",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockerinnight/rename-multiple-line.git"
+  },
+  "keywords": [
+    "rename",
+    "multiple lines",
+    "test cases"
+  ],
+  "author": "RockerInNight",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rockerinnight/rename-multiple-line/issues"
+  },
+  "homepage": "https://github.com/rockerinnight/rename-multiple-line#readme",
+  "dependencies": {
+    "@vercel/analytics": "^1.2.2"
+  }
+}
