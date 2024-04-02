@@ -1,0 +1,40 @@
+.container {
+  min-height: 95vh;
+}
+
+textarea {
+  height: 400px !important;
+}
+
+.alert,
+.how-to-use {
+  opacity: 0;
+}
+
+.show {
+  animation: fadeIn 0.5s ease-in-out forwards;
+  -webkit-animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.hide {
+  animation: faceOut 0.5s ease-in-out forwards;
+  -webkit-animation: faceOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes faceOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hue's Test-Cases Rename Tool</title>
+    <!-- IE 10+ "Metro" Tiles - 144x144 pixels in size icon should be transparent -->
+    <meta name="msapplication-TileColor" content="#D83434" />
+    <meta
+      name="msapplication-TileImage"
+      content="/images/favicon-144x144.png"
+    />
+    <!-- Touch Icons - iOS and Android 2.1+ 152x152 pixels in size. -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="/images/favicon-152x152.png"
+    />
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 96x96 pixels in size. -->
+    <link rel="icon" href="/images/favicon-96x96.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center mb-4">Hue's Test-Cases Rename Tool</h1>
+
+      <div class="row mb-4">
+        <div class="col text-center">
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Input text here"
+              id="input-text-area"
+              name="input"
+            ></textarea>
+            <label for="input-text-area">Input text here</label>
+          </div>
+        </div>
+
+        <div class="col-3 d-flex justify-content-center">
+          <div class="d-flex flex-column align-items-center gap-3 w-75">
+            <div
+              class="alert alert-success text-center m-0 px-1 py-2 w-100"
+              role="alert"
+              id="alert"
+            >
+              Copied!
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="transform()"
+            >
+              Generate & Copy
+            </button>
+
+            <div class="input-group">
+              <span class="input-group-text" id="prefix-text-input"
+                >Prefix</span
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Prefix"
+                aria-label="Prefix"
+                aria-describedby="prefix-text-input"
+                value="TC"
+                id="prefixText"
+              />
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-text" id="number-series-input"
+                >Series</span
+              >
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Number Series"
+                aria-label="Number Series"
+                aria-describedby="number-series-input"
+                value="3"
+                id="numberSeries"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-link w-100"
+              onclick="onShowHowToUse()"
+            >
+              How to use
+            </button>
+          </div>
+        </div>
+
+        <div class="col text-center">
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Output text here"
+              id="output-text-area"
+              name="output"
+            ></textarea>
+            <label for="output-text-area">Output text here</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row how-to-use" id="how-to-use">
+        <h4>How to use:</h4>
+        <p>
+          <b>"Input"</b> is the field to fill in the names of Test-Case to
+          convert.
+          <br />
+          <b>"Output"</b> is a field containing renamed Test-Cases.
+          <br />
+          <i>Both of the above fields support filling in multiple lines.</i>
+        </p>
+        <p>
+          <b>"Prefix"</b> is the field to enter the string of characters that
+          precedes the string of numbers that need to be replaced.
+          <br />
+          <b>"Series"</b> is the field to enter the length of the number series
+          after change.
+        </p>
+        <p>
+          When clicking on the <b>"Generate & Copy"</b> button, the output text
+          will be generated and copied to the clipboard automatically.
+        </p>
+      </div>
+    </div>
+
+    <footer class="blockquote-footer">
+      © <span id="current-year"></span> Doan Vu Linh&nbsp;<cite
+        title="Source Title"
+        >&nbsp;- All rights reserved</cite
+      >
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
