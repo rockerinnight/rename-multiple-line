@@ -19,7 +19,7 @@ function transform() {
   const prefix = prefixEle.value;
   const stringArr = inputEle.value.split("\n");
   const length = stringArr.length;
-  const regex = new RegExp(`${prefix}(.*)\\d`, "gm");
+  const regex = new RegExp(`${prefix}(\\d*)`, "gm");
 
   let num = 0;
   let index = 0;
